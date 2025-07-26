@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map - All Pages | Voltriya</title>
+    <meta name="description" content="Complete site map of all Voltriya pages - Main site and coming soon pages.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="coming-soon.css">
+    
+    <!-- Custom styles for sitemap -->
+    <style>
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-xl) 0;
+        }
+        
+        .sitemap-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: 16px;
+            padding: var(--space-xl);
+            transition: all var(--transition-normal);
+        }
+        
+        .sitemap-section:hover {
+            border-color: rgba(94, 91, 255, 0.3);
+            transform: translateY(-4px);
+        }
+        
+        .sitemap-section h3 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-family: var(--font-display);
+            background: var(--gradient-electric);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .sitemap-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .sitemap-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 8px;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .sitemap-link:hover {
+            background: rgba(94, 91, 255, 0.1);
+            color: var(--text-primary);
+            transform: translateX(4px);
+        }
+        
+        .main-site {
+            grid-column: 1 / -1;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(94, 91, 255, 0.1) 0%, rgba(46, 230, 192, 0.05) 100%);
+        }
+        
+        .main-site .btn {
+            margin-top: var(--space-lg);
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="coming-soon-bg"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="coming-soon-container">
+        <!-- Logo -->
+        <div class="coming-soon-logo">
+            <div class="logo">
+                <span class="logo-text">VOLTRIYA</span>
+                <span class="logo-token">$VOLT</span>
+            </div>
+        </div>
+        
+        <!-- Page Icon -->
+        <div class="page-icon">🗺️</div>
+        
+        <!-- Content -->
+        <div class="coming-soon-content">
+            <h1 class="coming-soon-title">Complete Site Map</h1>
+            <p class="coming-soon-subtitle">
+                Explore All Pages & Coming Soon Features
+            </p>
+            
+            <div class="sitemap-grid">
+                <!-- Main Site -->
+                <div class="sitemap-section main-site">
+                    <h3>🚀 Main Landing Page</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">
+                        The complete Voltriya experience with dramatic animations, 3D visualizations, and interactive elements.
+                    </p>
+                    <a href="index.html" class="btn btn-primary">View Main Site</a>
+                </div>
+                
+                <!-- Navigation Pages -->
+                <div class="sitemap-section">
+                    <h3>📋 Navigation</h3>
+                    <div class="sitemap-links">
+                        <a href="whitepaper.html" class="sitemap-link">📄 Whitepaper</a>
+                        <a href="launch-app.html" class="sitemap-link">🚀 Launch App</a>
+                    </div>
+                </div>
+                
+                <!-- Hero Actions -->
+                <div class="sitemap-section">
+                    <h3>⚡ Hero Actions</h3>
+                    <div class="sitemap-links">
+                        <a href="join-revolution.html" class="sitemap-link">⚡ Join GPU Revolution</a>
+                        <a href="documentation.html" class="sitemap-link">📖 Documentation</a>
+                    </div>
+                </div>
+                
+                <!-- Platform Features -->
+                <div class="sitemap-section">
+                    <h3>🖥️ Platform</h3>
+                    <div class="sitemap-links">
+                        <a href="mining.html" class="sitemap-link">⛏️ Mining</a>
+                        <a href="staking.html" class="sitemap-link">💎 Staking</a>
+                        <a href="compute.html" class="sitemap-link">🖥️ Compute</a>
+                        <a href="dashboard.html" class="sitemap-link">📊 Dashboard</a>
+                    </div>
+                </div>
+                
+                <!-- Resources -->
+                <div class="sitemap-section">
+                    <h3>📚 Resources</h3>
+                    <div class="sitemap-links">
+                        <a href="api-reference.html" class="sitemap-link">⚙️ API Reference</a>
+                        <a href="tutorials.html" class="sitemap-link">🎓 Tutorials</a>
+                        <a href="support.html" class="sitemap-link">💬 Support</a>
+                    </div>
+                </div>
+                
+                <!-- Community -->
+                <div class="sitemap-section">
+                    <h3>🌍 Community</h3>
+                    <div class="sitemap-links">
+                        <a href="discord.html" class="sitemap-link">💬 Discord</a>
+                        <a href="telegram.html" class="sitemap-link">✈️ Telegram</a>
+                        <a href="twitter.html" class="sitemap-link">🐦 Twitter</a>
+                        <a href="github.html" class="sitemap-link">🔧 GitHub</a>
+                        <a href="governance.html" class="sitemap-link">🗳️ Governance</a>
+                    </div>
+                </div>
+                
+                <!-- Company -->
+                <div class="sitemap-section">
+                    <h3>🏢 Company</h3>
+                    <div class="sitemap-links">
+                        <a href="about.html" class="sitemap-link">🌟 About</a>
+                        <a href="blog.html" class="sitemap-link">✍️ Blog</a>
+                        <a href="careers.html" class="sitemap-link">🚀 Careers</a>
+                        <a href="press-kit.html" class="sitemap-link">📰 Press Kit</a>
+                    </div>
+                </div>
+                
+                <!-- Legal -->
+                <div class="sitemap-section">
+                    <h3>⚖️ Legal</h3>
+                    <div class="sitemap-links">
+                        <a href="terms.html" class="sitemap-link">📋 Terms of Service</a>
+                        <a href="privacy.html" class="sitemap-link">🔒 Privacy Policy</a>
+                        <a href="cookies.html" class="sitemap-link">🍪 Cookie Policy</a>
+                        <a href="disclaimer.html" class="sitemap-link">⚠️ Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Total Count -->
+            <div style="margin-top: var(--space-2xl); padding: var(--space-lg); background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-primary);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    <strong style="color: var(--text-primary);">✅ Complete!</strong> 
+                    1 Main Landing Page + 24 Coming Soon Pages = 25 Total Pages
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="coming-soon-footer">
+            <p>All pages created with dark luxury theme • Built with ⚡ for the decentralized future</p>
+        </div>
+    </div>
+</body>
+</html> 
