@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+/* Global 80% scale - similar to Chrome zoom */
+html {
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%; /* Compensate for the 80% scale to maintain full width */
+    height: 125%; /* Compensate for the 80% scale to maintain full height */
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
 :root {
     /* Color Palette */
     --bg-primary: #0C0C0E;
@@ -51,12 +61,6 @@
     --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.2);
     --glow-primary: 0 0 20px rgba(94, 91, 255, 0.3);
     --glow-electric: 0 0 30px rgba(46, 230, 192, 0.4);
-}
-
-/* Base Typography */
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
 }
 
 body {
@@ -328,11 +332,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 125vh; /* Compensate for 80% scaling to fill entire screen */
     display: flex;
     align-items: center;
     position: relative;
-    padding: calc(80px + var(--space-4xl)) 0 var(--space-4xl);
+    padding: calc(150px + var(--space-4xl)) 0 var(--space-4xl);
     overflow: hidden;
 }
 
