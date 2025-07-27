@@ -574,8 +574,8 @@ h1, h2, h3, h4, h5, h6 {
     .hero-background,
     .hero-particles,
     .hero-glow {
-        width: 100vw !important;
-        min-width: 100vw !important;
+        width: 150vw !important;
+        min-width: 150vw !important;
         left: 0 !important;
         right: auto !important;
         margin-left: calc(-50vw + 50%);
