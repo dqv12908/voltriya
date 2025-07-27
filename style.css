@@ -294,13 +294,16 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav-container {
         padding: 0 var(--space-lg);
-        justify-content: flex-end; /* Only show toggle button on right */
+        justify-content: space-between; /* Show logo on left, toggle on right */
     }
     
-    .nav-brand,
+    .nav-brand {
+        display: flex !important; /* Keep logo visible */
+    }
+    
     .nav-menu,
     .nav-actions {
-        display: none !important; /* Hide all nav elements except toggle */
+        display: none !important; /* Hide menu and actions */
     }
     
     .nav-toggle {
@@ -439,19 +442,20 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     position: relative;
-    padding: calc(150px + var(--space-4xl)) 0 var(--space-4xl);
+    padding: calc(180px + var(--space-4xl)) 0 var(--space-4xl); /* Increased top padding for better spacing */
     overflow: hidden;
+    min-height: 100vh; /* Ensure minimum height */
 }
 
 /* Mobile hero adjustments for scaling */
 @media (max-width: 768px) {
     .hero {
         height: auto; /* Allow natural height */
-        min-height: 110vh; /* Slightly increased height */
+        min-height: 125vh; /* Increased height to compensate for scaling */
         padding: 0; /* Remove all padding */
         align-items: flex-start; /* Back to top alignment */
-        padding-top: 80px; /* Fixed top padding to account for scaling */
-        padding-bottom: var(--space-xl); /* Add bottom padding */
+        padding-top: 120px; /* Increased top padding to account for scaling */
+        padding-bottom: var(--space-2xl); /* Increased bottom padding */
         display: flex;
         flex-direction: column;
         justify-content: flex-start; /* Back to top alignment */
@@ -478,9 +482,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero-stats {
-        grid-template-columns: 1fr; /* Stack stats vertically */
-        gap: var(--space-lg);
-        margin-top: var(--space-xl);
+        display: none !important; /* Hide hero stats on mobile */
     }
     
     .hero-actions {
@@ -498,9 +500,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
     .hero {
         padding: 0;
-        padding-top: 60px; /* Reduced padding for smaller screens */
-        padding-bottom: var(--space-lg); /* Add bottom padding */
-        min-height: 110vh; /* Slightly increased height */
+        padding-top: 100px; /* Increased padding for better spacing with scaling */
+        padding-bottom: var(--space-xl); /* Increased bottom padding */
+        min-height: 125vh; /* Increased height to compensate for scaling */
     }
     
     .hero-container {
@@ -531,6 +533,11 @@ h1, h2, h3, h4, h5, h6 {
     /* Mobile rotating text adjustments for smaller screens */
     .rotating-text {
         display: none; /* Hide rotating text on mobile */
+    }
+    
+    /* Hide hero stats on mobile */
+    .hero-stats {
+        display: none !important; /* Hide hero stats on mobile */
     }
 }
 
@@ -585,6 +592,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: 800;
     line-height: 1.1;
+    margin-top: var(--space-lg); /* Add top margin to move title lower */
     margin-bottom: var(--space-xl);
 }
 
