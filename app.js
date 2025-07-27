@@ -395,11 +395,32 @@ class VoltriyaApp {
                 navMenu.classList.toggle('active');
                 navToggle.classList.toggle('active');
                 
-                // Ensure navbar stays visible when mobile menu is open
+                // Prevent/allow body scroll
                 if (!isMenuOpen) {
-                    nav.classList.add('mobile-menu-open');
+                    document.body.style.overflow = 'hidden';
                 } else {
-                    nav.classList.remove('mobile-menu-open');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close mobile menu when clicking on nav links
+            const closeMenu = () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+            
+            // Close on link click
+            document.addEventListener('click', (e) => {
+                if (e.target.matches('.nav-menu.active .nav-link')) {
+                    closeMenu();
+                }
+            });
+            
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                    closeMenu();
                 }
             });
         }
