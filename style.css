@@ -17,6 +17,18 @@ html {
 
 /* Mobile viewport compensation for scaling */
 @media (max-width: 768px) {
+    /* Ensure background covers full viewport on mobile */
+    body {
+        min-width: 100vw;
+        width: 100vw;
+        background: var(--bg-primary);
+    }
+    
+    html {
+        min-width: 100vw;
+        width: 100vw;
+    }
+    
     /* Disable potentially problematic animations on mobile */
     .hero-particles,
     .hero-glow {
@@ -507,6 +519,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
+    /* Ensure background covers full viewport on smaller mobile screens */
+    body {
+        min-width: 100vw;
+        width: 100vw;
+        background: var(--bg-primary);
+    }
+    
+    html {
+        min-width: 100vw;
+        width: 100vw;
+    }
+    
     .hero {
         padding: 0;
         padding-top: 100px; /* Increased padding for better spacing with scaling */
