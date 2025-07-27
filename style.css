@@ -5,6 +5,38 @@
     box-sizing: border-box;
 }
 
+/* Global background fix for built-in browsers */
+html, body {
+    background: var(--bg-primary) !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Ensure all sections have proper background coverage */
+.hero, .problem-solution, .features, .advantages, .tokenomics, .roadmap, .market-opportunity, .partners, .community, .footer {
+    background: var(--bg-primary) !important;
+    position: relative;
+}
+
+/* Create a universal background overlay for all sections */
+.hero::before, .problem-solution::before, .features::before, .advantages::before, .tokenomics::before, .roadmap::before, .market-opportunity::before, .partners::before, .community::before, .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-primary);
+    z-index: -1;
+    /* Ensure it covers beyond section boundaries */
+    width: 100vw;
+    height: 100%;
+    transform: scale(1.05);
+    transform-origin: center;
+}
+
 /* Global 80% scale - similar to Chrome zoom */
 html {
     transform: scale(0.8);
@@ -13,6 +45,7 @@ html {
     height: 125%; /* Compensate for the 80% scale to maintain full height */
     scroll-behavior: smooth;
     font-size: 16px;
+    background: var(--bg-primary); /* Ensure html element has background */
 }
 
 /* Mobile viewport compensation for scaling */
@@ -23,9 +56,11 @@ html {
         /* Force full viewport coverage for built-in browsers */
         margin: 0;
         padding: 0;
+        min-height: 100vh;
+        min-width: 100vw;
     }
     
-    /* New approach: Create a full viewport background overlay */
+    /* Enhanced full viewport background overlay for built-in browsers */
     body::after {
         content: '';
         position: fixed;
@@ -36,6 +71,9 @@ html {
         background: var(--bg-primary);
         z-index: -999;
         pointer-events: none;
+        /* Ensure it covers beyond viewport boundaries */
+        transform: scale(1.1);
+        transform-origin: center;
     }
     
     /* Disable potentially problematic animations on mobile */
@@ -113,6 +151,11 @@ body {
     /* Hide scrollbars globally */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
+    /* Ensure full viewport coverage */
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 /* Hide scrollbars for WebKit browsers */
@@ -534,9 +577,11 @@ h1, h2, h3, h4, h5, h6 {
         /* Force full viewport coverage for built-in browsers */
         margin: 0;
         padding: 0;
+        min-height: 100vh;
+        min-width: 100vw;
     }
     
-    /* New approach: Create a full viewport background overlay for smaller screens */
+    /* Enhanced full viewport background overlay for smaller screens */
     body::after {
         content: '';
         position: fixed;
@@ -547,6 +592,9 @@ h1, h2, h3, h4, h5, h6 {
         background: var(--bg-primary);
         z-index: -999;
         pointer-events: none;
+        /* Ensure it covers beyond viewport boundaries */
+        transform: scale(1.2);
+        transform-origin: center;
     }
     
     .hero {
@@ -599,6 +647,12 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     z-index: -1;
+    background: var(--bg-primary);
+    /* Ensure background stretches beyond boundaries */
+    width: 100vw;
+    height: 100vh;
+    transform: scale(1.1);
+    transform-origin: center;
 }
 
 .hero-particles {
