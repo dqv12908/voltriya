@@ -89,6 +89,15 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    /* Hide scrollbars globally */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbars for WebKit browsers */
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none;
 }
 
 /* Typography Scale */
@@ -1350,28 +1359,11 @@ h1, h2, h3, h4, h5, h6 {
 .roadmap-timeline {
     margin-top: var(--space-2xl);
     padding: var(--space-lg) 0;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden; /* Remove scrollbars */
     scroll-behavior: smooth;
 }
 
-.roadmap-timeline::-webkit-scrollbar {
-    height: 8px;
-}
-
-.roadmap-timeline::-webkit-scrollbar-track {
-    background: var(--bg-tertiary);
-    border-radius: 4px;
-}
-
-.roadmap-timeline::-webkit-scrollbar-thumb {
-    background: var(--gradient-electric);
-    border-radius: 4px;
-}
-
-.roadmap-timeline::-webkit-scrollbar-thumb:hover {
-    background: var(--gradient-primary);
-}
+/* Removed custom scrollbar styling since scrollbars are hidden */
 
 .timeline-container {
     display: flex;
