@@ -23,6 +23,17 @@ html {
         /* Force full viewport coverage for built-in browsers */
         margin: 0;
         padding: 0;
+        /* Force full width for built-in browsers */
+        min-width: 100vw;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    html {
+        /* Force full width for built-in browsers */
+        min-width: 100vw;
+        width: 100vw;
+        overflow-x: hidden;
     }
     
     /* Fix for built-in browser white bar issue */
@@ -36,6 +47,21 @@ html {
         background: var(--bg-primary);
         z-index: -1;
         pointer-events: none;
+    }
+    
+    /* Force all sections to full viewport width */
+    .hero,
+    .tokenomics,
+    .roadmap,
+    .partners,
+    .community,
+    .footer {
+        min-width: 100vw !important;
+        width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        padding-left: var(--space-lg) !important;
+        padding-right: var(--space-lg) !important;
+        box-sizing: border-box !important;
     }
     
     /* Stretch hero background elements to full viewport */
@@ -555,6 +581,17 @@ h1, h2, h3, h4, h5, h6 {
         /* Force full viewport coverage for built-in browsers */
         margin: 0;
         padding: 0;
+        /* Force full width for built-in browsers */
+        min-width: 100vw;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    html {
+        /* Force full width for built-in browsers */
+        min-width: 100vw;
+        width: 100vw;
+        overflow-x: hidden;
     }
     
     /* Fix for built-in browser white bar issue on smaller screens */
@@ -568,6 +605,21 @@ h1, h2, h3, h4, h5, h6 {
         background: var(--bg-primary);
         z-index: -1;
         pointer-events: none;
+    }
+    
+    /* Force all sections to full viewport width on smaller screens */
+    .hero,
+    .tokenomics,
+    .roadmap,
+    .partners,
+    .community,
+    .footer {
+        min-width: 100vw !important;
+        width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        padding-left: var(--space-md) !important;
+        padding-right: var(--space-md) !important;
+        box-sizing: border-box !important;
     }
     
     /* Stretch hero background elements to full viewport on smaller screens */
