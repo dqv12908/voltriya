@@ -19,14 +19,23 @@ html {
 @media (max-width: 768px) {
     /* Ensure background covers full viewport on mobile */
     body {
-        min-width: 100vw;
-        width: 100vw;
         background: var(--bg-primary);
+        /* Force full viewport coverage for built-in browsers */
+        margin: 0;
+        padding: 0;
     }
     
-    html {
-        min-width: 100vw;
+    /* Fix for built-in browser white bar issue */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100vw;
+        height: 100vh;
+        background: var(--bg-primary);
+        z-index: -1;
+        pointer-events: none;
     }
     
     /* Disable potentially problematic animations on mobile */
@@ -521,14 +530,23 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
     /* Ensure background covers full viewport on smaller mobile screens */
     body {
-        min-width: 100vw;
-        width: 100vw;
         background: var(--bg-primary);
+        /* Force full viewport coverage for built-in browsers */
+        margin: 0;
+        padding: 0;
     }
     
-    html {
-        min-width: 100vw;
+    /* Fix for built-in browser white bar issue on smaller screens */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100vw;
+        height: 100vh;
+        background: var(--bg-primary);
+        z-index: -1;
+        pointer-events: none;
     }
     
     .hero {
