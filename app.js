@@ -913,4 +913,18 @@ const dynamicStyles = `
 // Inject dynamic styles
 const styleSheet = document.createElement('style');
 styleSheet.textContent = dynamicStyles;
-document.head.appendChild(styleSheet); 
+document.head.appendChild(styleSheet);
+
+// Tokenomics dropdown functionality
+function toggleDetails(element) {
+    // Remove active class from all other legend items
+    const allLegendItems = document.querySelectorAll('.legend-item');
+    allLegendItems.forEach(item => {
+        if (item !== element) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle active class on clicked element
+    element.classList.toggle('active');
+} 
